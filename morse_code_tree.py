@@ -1,12 +1,15 @@
 class Node(object):
+    """Node class used to create a binary tree"""
+
     def __init__(self, data, left=None, right=None):
+        """Instantiate a node"""
         self.data = data
         self.left = left
         self.right = right
 
     def __repr__(self):
+        """Override print with node data"""
         return "<Binary Node %s>" % self.data
-
 
 def translate_morse_code(root, morse_code):
     """Translates morse code to English"""
@@ -18,7 +21,6 @@ def translate_morse_code(root, morse_code):
         for char in range(len(item)):
             if item[char] == ".":
                 current = current.left
-                # print current.data
             else: 
                 current = current.right
         result += current.data
@@ -57,6 +59,6 @@ print translate_morse_code(root, morse_code)
 morse_code = ["--.","..", ".-.", ".-.."] #=> "girl"
 print translate_morse_code(root, morse_code)
 morse_code = ["--.", "-..", "..", "...", "..-."]
-print translate_morse_code(root, morse_code)
+print translate_morse_code(root, morse_code) #=> "gdisf"
 
 
