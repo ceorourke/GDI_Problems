@@ -17,13 +17,6 @@ def find_lonely_number_fancy(nums):
         if nums.count(num) == 1:
             return num
 
-def find_lonely_number_comprehension(nums):
-    """An alternate method to the above that uses a list comprehension"""
-
-    result = [num for num in nums if nums.count(num) == 1]
-    return result[0]
-
 nums = [2,6,3,8,6,2,3]
 print find_lonely_number_standard(nums)
 print find_lonely_number_fancy(nums)
-print find_lonely_number_comprehension(nums)
